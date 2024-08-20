@@ -1,3 +1,36 @@
+/* CSS variables */
+:root {
+    --header-bg-color: #34495E;
+    --header-title-color: #E74C3C;
+    --header-text-color: #ECF0F1;
+    --highlight-color: #E74C3C;
+    --link-bg-color: #ECF0F1;
+    --link-bg-color-hover: #E74C3C;
+    --bg1: #ECF0F1;
+    --bg2: #8095a3;
+    --footer-bg-color: #34495E;
+    --footer-text-color: #ECF0F1;
+    --scrollbar-bg: #34495E;
+    --scrollbar-thumb: #E74C3C;
+
+    --header-height: 50px;
+}
+
+/* Different sections on the page */
+#home { 
+    background: url('/images/bg.png') no-repeat center center;
+    background-size: cover; 
+    margin-top: var(--header-height); /* Offset for the header height */
+}
+#projects { background-color: var(--bg2); }
+#classes { 
+    background-color: var(--bg1);
+    scroll-padding-top: 1000px;
+}
+#resume { background-color: var(--bg2); }
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,28 +40,478 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    background-color: var(--bg1);
+    color: var(--body-text-color);
+    margin: 0;
+    overflow-x: hidden;
 }
 
 main {
-    margin: 20px 0;
+    flex-grow: 1;
 }
 
-footer {
-    background: #333;
-    color: #fff;
+/* Full height for each section minus the header height */
+main section {
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
     text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    scroll-margin-top: var(--header-height); /* Offset anchor scroll for the header */
 }
+
+/* Flex container for full viewport height */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/* ===== START HEADER AND FOOTER CSS ===== */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--header-bg-color);
+        color: var(--header-text-color);
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        z-index: 1000;
+    }
+
+    /* Header title */
+    header h1 {
+        transform: translateX(-15%);
+        margin: 0 auto;
+        padding: 60px;
+        font-size: 36px;
+        color: var(--header-title-color);
+        
+    }
+
+    footer {
+        background-color: var(--footer-bg-color);
+        color: var(--footer-text-color);
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Styling for navigation and external links */
+    .nav-left, .nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-left {
+        margin-left: -10px;  
+    }
+
+    .nav-right {
+        margin-left: 10%;
+    }
+
+    /* Navigation link styles */
+    .navlinks a {
+        color: var(--header-text-color);
+        text-decoration: none;
+        font-size: 14px;
+        padding: 17px 20px; /* directly related to the height of the header */
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navlinks a:hover {
+        background-color: var(--highlight-color);
+        color: var(--text-color-light);
+    }
+
+    .navlinks, .externallinks {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* External link styles */
+    .externallinks a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-color: var(--link-bg-color);
+        color: var(--header-bg-color);
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.3s;
+    }
+
+    .externallinks a:hover {
+        background-color: var(--link-bg-color-hover);
+    }
+
+    .externallinks li {
+        margin-left: 10px;
+    }
+
+    /* Icon font size */
+    .externallinks i {
+        font-size: 20px;
+    }
+/* ===== END HEADER AND FOOTER CSS ===== */
+
+
+/* ===== START SCROLLBAR CSS ===== */
+    /* I Used an online tool to help create the scrollbar */
+    /*  Source: https://codepen.io/stephenpaton-tech/full/JjRvGmY */
+
+    /* Firefox */
+    * {
+        scrollbar-width: auto;
+        scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: var(--scrollbar-bg);
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb);
+        border-radius: 10px;
+        border: 4px solid #ffffff;
+    }
+/* ===== END SCROLLBAR CSS ===== */
+
+
+
+/* ===== START HOME SECTION CSS ===== */
+    .text-container-info { /* EXAMPLE TEXT BOX FOR A FIXED POTION */
+        position: absolute;
+        top: 80%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjusts the position to center the element */
+        background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+        color: white; /* Text color */
+        padding: 20px; /* Padding inside the container */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* box shadow */
+        text-align: center; /* Center text inside the container */
+        width: 98%; /* width of container */
+        height: 38%; /* height of container */
+        overflow: hidden; /* no scrollbar if content overflows */
+        font-size: calc(0.5em + 0.5vw); /* font-size based on screen width */
+        line-height: 1.4; /* text line height */
+    }
+
+    .text-container-info h3 {
+        margin-bottom: 5px;
+    }
+
+    .text-container-info p {
+        margin-bottom: 15px; /* Spacing between paragraphs */
+        text-align: left;
+    }
+
+    .text-container-contact {
+        position: absolute;
+        top: 17%;
+        left: 88.2%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        text-align: center; 
+        width: 22%; 
+        height: 20%;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(0.6em + 0.5vw); /* font-size based on screen width */
+        line-height: 1.4;
+    }
+    
+    .text-container-contact h3 {
+        margin-bottom: 10px;
+    }
+    
+    .text-container-contact p {
+        margin: 5px 0;
+        text-align: left;
+    }
+    
+    .text-container-contact a {
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: 1px solid #ffffff;
+        transition: color 0.3s, border-bottom-color 0.3s;
+    }
+/* ===== END HOME SECTION CSS ===== */
+
+
+/* ===== START PROJECTS SECTION CSS ===== */
+    .section-header-projects {
+        position: absolute;
+        top: 104.4%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--header-title-color);
+        color: var(--header-text-color);
+        padding-top: 10px;
+        text-align: center;
+        width: 101%;
+        height: 80px;
+    }
+
+    /* Projects Container */
+    .projects-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 20px;
+        padding: 10px;
+        padding-top: 80px;
+        height: calc(100vh - 80px);
+        width: 100%;
+    }
+    
+    /* Individual Project Box */
+    .project-box {
+        background-color: var(--container-bg-color, #C7BDBD);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        flex: 1;
+        min-width: 0;
+        transition: transform 0.3s ease-in-out;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .project-box:hover {
+        transform: scale(1.025);
+    }
+    
+    /* Project Image */
+    .project-box img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        flex-grow: 1;
+    }
+    
+    /* Project Details */
+    /*.project-details {
+
+    }*/
+    
+    .project-details h3 {
+        color: var(--container-title-color, #C55C00);
+        background-color: var(--container-text-bg, #ffffff8a);
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    
+    .project-details p {
+        color: var(--container-text-color, #2C3E50);
+        background-color: var(--container-text-bg, #ffffff31);
+        font-size: 16px;
+        height: 350px;
+    }
+    
+    /* Link to project */
+    .project-box a {
+        color: inherit;
+        text-decoration: none;
+        height: 100%;
+    }
+/* ===== END PROJECTS SECTION CSS ===== */
+
+
+/* ===== START CLASSES SECTION CSS ===== */
+.section-header-classes
+{
+    position: absolute;
+    top: 198.9%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--header-title-color);
+    color: var(--header-text-color);
+    padding-top: 10px;
+    text-align: center;
+    width: 101%;
+    height: 80px;
+}
+
+/* Container for Class Pages */
+.class-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px; /* Space between items */
+}
+
+/* Individual Class Box */
+.class-box {
+    background-color: var(--container-bg-color, #C7BDBD);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    padding: 10px; /* Add padding inside the box */
+}
+
+.class-box:hover {
+    transform: scale(1.025);
+}
+
+/* Class Details */
+.class-details {
+    color: var(--container-text-color, #2C3E50);
+}
+
+.class-details h3 {
+    color: var(--container-title-color, #C55C00);
+    background-color: var(--container-text-bg, #ffffff65);
+    font-size: 16px;
+    text-decoration: none;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.class-details p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+/* Link to class description */
+.class-box a {
+    color: inherit;
+    text-decoration: none;
+    margin-top: auto;
+    font-weight: bold;
+    color: var(--highlight-color);
+    transition: color 0.3s;
+    
+}
+
+.class-box a:hover {
+    color: var(--header-text-color);
+}
+
+
+/* Scroll Buttons */
+.scroll-button {
+    position: absolute;
+    top: 245%;
+    transform: translateY(-50%);
+    background-color: var(--header-title-color);
+    border: none;
+    color: var(--header-text-color);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+/* Positioning buttons */
+.left-button {
+    left: 10px; 
+}
+
+.right-button {
+    right: 10px; 
+}
+
+.left-button:hover, .right-button:hover {
+    background-color: #bb3e30;
+}
+/* ===== END CLASSESS SECTION CSS ===== */
+
+
+/* ===== START RESUME SECTION CSS ===== */
+.section-header-resume
+{
+    position: absolute;
+    top: 293.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--header-title-color);
+    color: var(--header-text-color);
+    padding-top: 10px;
+
+    text-align: center;
+    width: 101%;
+    height: 80px;
+}
+
+.resume-file {
+    flex: 1;
+    text-align: right;
+}
+
+.resume-file iframe {
+    height: calc(100vh - 80px);
+    padding-top: 50px;
+    margin-bottom: -41px;
+
+}
+
+.resume-details-box {
+    background-color: var(--container-bg-color, #C7BDBD);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 0;
+    text-align: center;
+    height: calc(100vh - 160px);
+    width: 36%;
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Project Details */
+.resume-details {
+    overflow: auto; /* Enable scrolling if needed */
+    flex: 1; /* Take up remaining space */
+    box-sizing: border-box;
+}
+
+.resume-details h3 {
+    color: var(--container-title-color, #C55C00);
+    background-color: var(--container-text-bg, #fff);
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.resume-details p {
+    color: var(--container-text-color, #2C3E50);
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+/* ===== END RESUME SECTION CSS ===== */
