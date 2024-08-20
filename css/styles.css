@@ -14,20 +14,21 @@
     --scrollbar-thumb: #E74C3C;
 
     --header-height: 50px;
+    --footer-height: 30px;
 }
 
 /* Different sections on the page */
 #home { 
-    background: url('/images/bg.png') no-repeat center center;
+    background: url('/images/temp2.jpg') no-repeat center center;
     background-size: cover; 
     margin-top: var(--header-height); /* Offset for the header height */
 }
-#projects { background-color: var(--bg2); }
 #classes { 
     background-color: var(--bg1);
     scroll-padding-top: 1000px;
 }
-#resume { background-color: var(--bg2); }
+#projects { background-color: var(--bg2); }
+#resume { background-color: var(--bg1); }
 
 
 
@@ -78,7 +79,7 @@ main section {
         width: 100%;
         background-color: var(--header-bg-color);
         color: var(--header-text-color);
-        height: 50px;
+        height: var(--header-height);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -99,7 +100,7 @@ main section {
     footer {
         background-color: var(--footer-bg-color);
         color: var(--footer-text-color);
-        height: 30px;
+        height: var(--footer-height);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -265,91 +266,10 @@ main section {
 /* ===== END HOME SECTION CSS ===== */
 
 
-/* ===== START PROJECTS SECTION CSS ===== */
-    .section-header-projects {
-        position: absolute;
-        top: 104.4%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: var(--header-title-color);
-        color: var(--header-text-color);
-        padding-top: 10px;
-        text-align: center;
-        width: 101%;
-        height: 80px;
-    }
-
-    /* Projects Container */
-    .projects-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        gap: 20px;
-        padding: 10px;
-        padding-top: 80px;
-        height: calc(100vh - 80px);
-        width: 100%;
-    }
-    
-    /* Individual Project Box */
-    .project-box {
-        background-color: var(--container-bg-color, #C7BDBD);
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        flex: 1;
-        min-width: 0;
-        transition: transform 0.3s ease-in-out;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .project-box:hover {
-        transform: scale(1.025);
-    }
-    
-    /* Project Image */
-    .project-box img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        flex-grow: 1;
-    }
-    
-    /* Project Details */
-    /*.project-details {
-
-    }*/
-    
-    .project-details h3 {
-        color: var(--container-title-color, #C55C00);
-        background-color: var(--container-text-bg, #ffffff8a);
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-    
-    .project-details p {
-        color: var(--container-text-color, #2C3E50);
-        background-color: var(--container-text-bg, #ffffff31);
-        font-size: 16px;
-        height: 350px;
-    }
-    
-    /* Link to project */
-    .project-box a {
-        color: inherit;
-        text-decoration: none;
-        height: 100%;
-    }
-/* ===== END PROJECTS SECTION CSS ===== */
-
-
 /* ===== START CLASSES SECTION CSS ===== */
-.section-header-classes
-{
+.section-header-classes {
     position: absolute;
-    top: 198.9%;
+    top: calc(100vh + 40px);
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--header-title-color);
@@ -365,6 +285,8 @@ main section {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     gap: 20px; /* Space between items */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    width: 100%;
 }
 
 /* Individual Class Box */
@@ -448,17 +370,96 @@ main section {
 /* ===== END CLASSESS SECTION CSS ===== */
 
 
-/* ===== START RESUME SECTION CSS ===== */
-.section-header-resume
-{
+/* ===== START PROJECTS SECTION CSS ===== */
+.section-header-projects {
     position: absolute;
-    top: 293.5%;
+    top: calc(200vh + 120px);
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--header-title-color);
     color: var(--header-text-color);
     padding-top: 10px;
+    text-align: center;
+    width: 101%;
+    height: 80px;
+}
 
+/* Projects Container */
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    padding: 10px;
+    padding-top: 80px;
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+/* Individual Project Box */
+.project-box {
+    background-color: var(--container-bg-color, #C7BDBD);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    min-width: 0;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-box:hover {
+    transform: scale(1.025);
+}
+
+/* Project Image */
+.project-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-grow: 1;
+}
+
+/* Project Details */
+/*.project-details {
+
+}*/
+
+.project-details h3 {
+    color: var(--container-title-color, #C55C00);
+    background-color: var(--container-text-bg, #ffffff8a);
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.project-details p {
+    color: var(--container-text-color, #2C3E50);
+    background-color: var(--container-text-bg, #ffffff31);
+    font-size: 16px;
+    height: 350px;
+}
+
+/* Link to project */
+.project-box a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+}
+/* ===== END PROJECTS SECTION CSS ===== */
+
+
+/* ===== START RESUME SECTION CSS ===== */
+.section-header-resume
+{
+    position: absolute;
+    top: calc(200vh + 200px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--header-title-color);
+    color: var(--header-text-color);
+    padding-top: 10px;
     text-align: center;
     width: 101%;
     height: 80px;
