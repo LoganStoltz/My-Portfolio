@@ -25,9 +25,12 @@ const classPages = document.querySelectorAll('.class-page');
 const totalPages = classPages.length;
 
 function updatePage() {
-    classPages.forEach((page, index) => {
+    classPages.forEach((page) => {
         page.style.transform = `translateX(-${currentPage * 100}%)`;
     });
+
+    document.querySelector('.left-button').disabled = currentPage === 0;
+    document.querySelector('.right-button').disabled = currentPage === totalPages - 1;
 }
 
 function prevPage() {
