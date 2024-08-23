@@ -1,3 +1,5 @@
+// Author: Logan Stoltz 
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
 });
