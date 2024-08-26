@@ -1,0 +1,201 @@
+/* Author: Logan Stoltz */
+
+/* CSS variables */
+:root {
+    --header-bg-color: #34495E;
+    --header-title-color: #E74C3C;
+    --header-text-color: #ECF0F1;
+    --highlight-color: #E74C3C;
+    --link-bg-color: #ECF0F1;
+    --link-bg-color-hover: #E74C3C;
+    --bg1: #ECF0F1;
+    --bg2: #8095a3;
+    --footer-bg-color: #34495E;
+    --footer-text-color: #ECF0F1;
+    --scrollbar-bg: #34495E;
+    --scrollbar-thumb: #E74C3C;
+
+    --header-height: 50px;
+    --footer-height: 30px;
+}
+
+/* Different sections on the page */
+#home { 
+    background: url('/images/temp2.jpg') no-repeat center center;
+    background-size: cover; 
+    margin-top: var(--header-height); /* Offset for the header height */
+}
+#classes { 
+    background-color: var(--bg1);
+    scroll-padding-top: 1000px;
+}
+#projects { background-color: var(--bg2); }
+#resume { background-color: var(--bg1); }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg1);
+    color: var(--body-text-color);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Full height for each section minus the header height */
+main section {
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+    scroll-margin-top: var(--header-height); /* Offset anchor scroll for the header */
+}
+
+/* Flex container for full viewport height */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/* ===== START HEADER AND FOOTER CSS ===== */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--header-bg-color);
+        color: var(--header-text-color);
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        z-index: 1000;
+    }
+
+    /* Header title */
+    header h1 {
+        transform: translateX(-15%);
+        margin: 0 auto;
+        padding: 60px;
+        font-size: 36px;
+        color: var(--header-title-color);
+        
+    }
+
+    footer {
+        background-color: var(--footer-bg-color);
+        color: var(--footer-text-color);
+        height: var(--footer-height);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Styling for navigation and external links */
+    .nav-left, .nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-left {
+        margin-left: -10px;  
+    }
+
+    .nav-right {
+        margin-left: 10%;
+    }
+
+    /* Navigation link styles */
+    .navlinks a {
+        color: var(--header-text-color);
+        text-decoration: none;
+        font-size: 14px;
+        padding: 17px 20px; /* directly related to the height of the header */
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navlinks a:hover {
+        background-color: var(--highlight-color);
+        color: var(--text-color-light);
+    }
+
+    .navlinks, .externallinks {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* External link styles */
+    .externallinks a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-color: var(--link-bg-color);
+        color: var(--header-bg-color);
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.3s;
+    }
+
+    .externallinks a:hover {
+        background-color: var(--link-bg-color-hover);
+    }
+
+    .externallinks li {
+        margin-left: 10px;
+    }
+
+    /* Icon font size */
+    .externallinks i {
+        font-size: 20px;
+    }
+/* ===== END HEADER AND FOOTER CSS ===== */
+
+
+/* ===== START SCROLLBAR CSS ===== */
+    /* I Used an online tool to help create the scrollbar */
+    /*  Source: https://codepen.io/stephenpaton-tech/full/JjRvGmY */
+
+    /* Firefox */
+    * {
+        scrollbar-width: auto;
+        scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: var(--scrollbar-bg);
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb);
+        border-radius: 10px;
+        border: 4px solid #ffffff;
+    }
+/* ===== END SCROLLBAR CSS ===== */

@@ -21,7 +21,7 @@
 
 /* Different sections on the page */
 #home { 
-    background: url('/images/temp2.jpg') no-repeat center center;
+    background: url('/images/temp1.jpg') no-repeat center center;
     background-size: cover; 
     margin-top: var(--header-height); /* Offset for the header height */
 }
@@ -410,16 +410,16 @@ main section {
     justify-content: space-between;
     align-items: stretch;
     gap: 20px;
-    padding: 10px;
-    padding-top: 80px;
-    height: calc(100vh - 80px);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 85px;
+    height: calc(100vh - 85px);
     width: 100%;
 }
 
 /* Individual Project Box */
 .project-box {
     background-color: var(--container-bg-color, #C7BDBD);
-    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     flex: 1;
@@ -436,11 +436,15 @@ main section {
 
 /* Project Image */
 .project-box img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    flex-grow: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* Ensures the image fills the container width */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Cuts out edges that don't fit while covering the container */
+    overflow: hidden; /* Hides any overflow */
 }
+
 
 /* Project Details */
 /*.project-details {
