@@ -287,7 +287,7 @@ main section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 60px;
+    padding-top: 20px;
     height: calc(100% - 50px);
     width: 100vw;
 }
@@ -296,7 +296,6 @@ main section {
 .class-page {
     flex: 0 0 100%;
     display: grid;
-    gap: 15px 15px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3);
     height: calc(100vh - 130px);
@@ -313,6 +312,7 @@ main section {
 .class-box {
     transition: transform 0.3s ease-in-out;
     width: 100%;
+    margin: 0px;
     padding: 0px;
 }
 
@@ -327,21 +327,20 @@ main section {
 
 .class-details h3 {
     color: var(--header-title-color);
-    font-size: 18px;
+    font-size: calc(0.3em + 0.5vw);
     text-decoration: none;
     width: 100%;
 }
 
 .class-details h4 {
     color: rgba(0, 0, 0, 0.473);
-    font-size: 12px;
+    font-size: calc(0.1em + 0.5vw);
     text-decoration: none;
     width: 100%;
 }
 
 .class-details p {
-    font-size: 14px;
-    margin-bottom: 10px;
+    font-size: calc(0.2em + 0.5vw);
     text-decoration: none;
 }
 
