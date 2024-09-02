@@ -300,6 +300,7 @@ main section {
     grid-template-rows: repeat(3);
     height: calc(100vh - 130px);
     transition: transform 0.5s ease-in-out;
+    padding-top: 10px;
     padding-left: 60px;
     padding-right: 60px;
     overflow: hidden;
