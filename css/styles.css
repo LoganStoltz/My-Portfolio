@@ -308,6 +308,18 @@ main section {
     overflow: hidden;
 }
 
+@media (max-width: 1024px) {
+    .class-page {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .class-page {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+
 /* Individual Class Box */
 .class-box {
     transition: transform 0.3s ease-in-out;
