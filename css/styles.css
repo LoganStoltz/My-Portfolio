@@ -246,7 +246,7 @@ main section {
         overflow: hidden;
         align-items: center;
         justify-content: center;
-        font-size: calc(0.6em + 0.5vw); /* font-size based on screen width */
+        font-size: calc(0.6em + 0.5vw);
         line-height: 1.4;
     }
     
@@ -287,7 +287,7 @@ main section {
     justify-content: space-between;
     align-items: center;
     padding-top: 60px;
-    height: calc(100% - 50px);
+    height: calc(100vh - 50px);
     width: 100vw;
 }
 
@@ -295,16 +295,13 @@ main section {
 .class-page {
     flex: 0 0 100%;
     display: grid;
-    gap: 15px 15px;
+    gap: 1vh 1vw;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3);
     height: calc(100vh - 130px);
-    margin-top: 20px;
     transition: transform 0.5s ease-in-out;
     padding-left: 60px;
     padding-right: 60px;
-    padding-top: 30px;
-    padding-bottom: 10px;
     overflow: hidden;
 }
 
@@ -326,20 +323,20 @@ main section {
 
 .class-details h3 {
     color: var(--header-title-color);
-    font-size: 18px;
+    font-size: calc(0.4em + 0.5vw);
     text-decoration: none;
     width: 100%;
 }
 
 .class-details h4 {
     color: rgba(0, 0, 0, 0.473);
-    font-size: 12px;
+    font-size: calc(0.1em + 0.5vw);
     text-decoration: none;
     width: 100%;
 }
 
 .class-details p {
-    font-size: 14px;
+    font-size: calc(0.15em + 0.5vw);
     margin-bottom: 10px;
     text-decoration: none;
 }
