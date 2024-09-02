@@ -403,6 +403,7 @@ main section {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    text-align: center;
     gap: 20px;
     padding-left: 30px;
     padding-right: 30px;
@@ -418,14 +419,12 @@ main section {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     flex: 1;
     min-width: 0;
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
     display: flex;
     flex-direction: column;
 }
 
-.project-box:hover {
-    transform: scale(1.025);
+.project-box img:hover {
+    transform: scale(1.35);
 }
 
 /* Project Image */
@@ -438,33 +437,60 @@ main section {
     height: auto; /* Maintains the aspect ratio */
     object-fit: cover; /* Cuts out edges that don't fit while covering the container */
     overflow: hidden; /* Hides any overflow */
+    transition: transform 2.5s ease-in;
 }
 
 
 /* Project Details */
-/*.project-details {
-
-}*/
+.project-details {
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
 .project-details h3 {
     color: var(--container-title-color, #C55C00);
-    background-color: var(--container-text-bg, #ffffff8a);
+    background-color: var(--container-text-bg, #ffffff);
     padding-bottom: 10px;
     padding-top: 10px;
 }
 
 .project-details p {
     color: var(--container-text-color, #2C3E50);
-    background-color: var(--container-text-bg, #ffffff31);
+    background-color: var(--container-text-bg, #ffffff);
     font-size: 16px;
-    height: 350px;
+    height: calc(40vh - 120px);
+}
+
+.project-details a {
+    background-color: orange;
+    position: relative;
+    text-align: center;
+    height: 60px; /* Set the height of the square */
+    width: 180px; /* Set the width equal to height to make it a square */
+    font: 40px;
+}
+
+.project-github-button {
+    background-color: orange;
+    position: relative;
+    text-align: center;
+    left: 50vw;
+    height: 60px; /* Set the height of the square */
+    width: 180px; /* Set the width equal to height to make it a square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding/borders are included in size */
+    transition: all 0.3s ease; /* Optional: Smooth resizing and styling transitions */
 }
 
 /* Link to project */
 .project-box a {
     color: inherit;
     text-decoration: none;
-    height: 100%;
+    height: 50%;
 }
 /* ===== END PROJECTS SECTION CSS ===== */
 
