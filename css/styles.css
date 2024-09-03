@@ -55,7 +55,8 @@ main {
 
 /* Full height for each section minus the header height */
 main section {
-    min-height: calc(100vh - var(--header-height));
+    min-height: 50vh;
+    height: calc(100vh - var(--header-height));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +69,7 @@ main section {
 .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 
@@ -429,14 +430,10 @@ main section {
 
 /* Project Image */
 .project-box img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 100%; /* Ensures the image fills the container width */
-    min-height: 50%;
+    min-height: 100%;
     height: auto; /* Maintains the aspect ratio */
     object-fit: cover; /* Cuts out edges that don't fit while covering the container */
-    overflow: hidden; /* Hides any overflow */
     transition: transform 2.5s ease-in;
 }
 
@@ -465,25 +462,26 @@ main section {
 
 .project-details a {
     background-color: orange;
-    position: relative;
+    position: absolute;
+    align-items: center;
     text-align: center;
-    height: 60px; /* Set the height of the square */
-    width: 180px; /* Set the width equal to height to make it a square */
-    font: 40px;
+    transform: translateX(-50%);
+    font-size: calc(0.4em +  0.4vh + 0.4vw);
+    width: 200px;
+    height: 10px;
+    outline: rgb(139, 0, 0);
+    outline-width: 3px;
+    outline-style: solid;
 }
 
 .project-github-button {
     background-color: orange;
-    position: relative;
+    color: white;
+    padding: 8px 10px;
     text-align: center;
-    left: 50vw;
-    height: 60px; /* Set the height of the square */
-    width: 180px; /* Set the width equal to height to make it a square */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box; /* Ensure padding/borders are included in size */
-    transition: all 0.3s ease; /* Optional: Smooth resizing and styling transitions */
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 /* Link to project */
