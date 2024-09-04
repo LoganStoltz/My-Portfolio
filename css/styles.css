@@ -30,7 +30,10 @@
     scroll-padding-top: 1000px;
 }
 #projects { background-color: var(--bg2); }
-#resume { background-color: var(--bg1); }
+#resume { 
+    background-color: var(--bg1); 
+    z-index: 1;
+}
 
 
 
@@ -397,105 +400,114 @@ main section {
     text-align: center;
     width: 101%;
     height: 60px;
+    z-index: 1;
 }
 
 /* Projects Container */
 .projects-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: stretch;
-    text-align: center;
     gap: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 60px;
-    height: calc(100vh - 85px);
+    padding: 20px 30px;
     width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    box-sizing: border-box;
+    
 }
 
 /* Individual Project Box */
 .project-box {
-    background-color: var(--container-bg-color, #C7BDBD);
+    background-color: white;
     overflow: hidden;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    flex: 1;
-    min-width: 0;
+    flex: 1 1 calc(33.333% - 40px);
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
 }
 
 .project-box img:hover {
-    transform: scale(1.35);
+    transform: scale(1.15);
 }
 
 /* Project Image */
 .project-box img {
-    width: 100%; /* Ensures the image fills the container width */
-    min-height: 100%;
-    height: auto; /* Maintains the aspect ratio */
-    object-fit: cover; /* Cuts out edges that don't fit while covering the container */
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
     transition: transform 2.5s ease-in;
 }
 
+/* Image Container */
+.project-image-container {
+    width: 100%;
+    height: 500px; /* Set a fixed height for the image container */
+    overflow: hidden;
+}
 
 /* Project Details */
 .project-details {
-    z-index: 1;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 4;
 }
 
 .project-details h3 {
-    color: var(--container-title-color, #C55C00);
-    background-color: var(--container-text-bg, #ffffff);
-    padding-bottom: 10px;
+    color: var(--header-title-color);
+    background-color: white;
+    font-size: calc(0.4em + 0.4vh + 0.4vw);
     padding-top: 10px;
 }
 
 .project-details p {
     color: var(--container-text-color, #2C3E50);
-    background-color: var(--container-text-bg, #ffffff);
-    font-size: 16px;
-    height: calc(40vh - 120px);
+    background-color: white;
+    font-size: calc(0.3em + 0.3vh + 0.3vw);
+    flex-grow: 1;
+    height: 36vh;
+    padding: 10px;
 }
 
 .project-details a {
-    background-color: orange;
-    position: absolute;
-    align-items: center;
-    text-align: center;
-    transform: translateX(-50%);
-    font-size: calc(0.4em +  0.4vh + 0.4vw);
-    width: 200px;
-    height: 10px;
-    outline: rgb(139, 0, 0);
-    outline-width: 3px;
-    outline-style: solid;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    height: 50px;
+    font-size: calc(0.4em + 0.4vh + 0.4vw);
 }
 
 .project-github-button {
-    background-color: orange;
-    color: white;
-    padding: 8px 10px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    background-color: var(--bg2);
+    outline-width: 3px;
+    outline-style: solid;
+    outline-color: var(--header-bg-color);
+    width: 200px;
+    margin: 25px;
+    
+}
+
+.project-github-button:hover {
+    background-color: darkorange;
 }
 
 /* Link to project */
 .project-box a {
     color: inherit;
     text-decoration: none;
-    height: 50%;
+    display: block;
+    height: 100%;
 }
 /* ===== END PROJECTS SECTION CSS ===== */
 
 
 /* ===== START RESUME SECTION CSS ===== */
-.section-header-resume
-{
+.section-header-resume {
     position: absolute;
     top: calc(300vh - 70px);
     left: 50%;
@@ -531,8 +543,8 @@ main section {
 
 /* Project Details */
 .resume-details {
-    overflow: auto; /* Enable scrolling if needed */
-    flex: 1; /* Take up remaining space */
+    overflow: auto;
+    flex: 1;
     box-sizing: border-box;
 }
 
@@ -547,7 +559,7 @@ main section {
 
 .resume-details p {
     color: var(--container-text-color, #2C3E50);
-    font-size: 16px;
+    font-size: 20px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
