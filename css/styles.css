@@ -412,7 +412,7 @@ main section {
     gap: 30px;
     padding: 20px 30px;
     max-width: 100%;
-    height: auto;
+    height: var(--project-container-height, auto);
     padding-top: 45px;
     box-sizing: border-box;
 }
@@ -440,12 +440,15 @@ main section {
     height: 50vh;
     overflow: hidden;
     object-fit: fill;
-    transition: transform 2.5s ease-in;
+    opacity: 80%;
+}
+
+.project-box img:hover {
+    opacity: 100%;
 }
 
 /* Project Details */
 .project-details {
-    padding: 5px;
     flex: 1;
     text-align: center;
 }
@@ -453,17 +456,20 @@ main section {
 .project-details h3 {
     color: var(--header-title-color);
     font-size: calc(0.5em + 0.4vh + 0.4vw);
+    background-color: #e74d3c17;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .project-details h4 {
     color: var(--container-text-color);
-    font-size: calc(0.3em + 0.3vh + 0.3vw);
+    font-size: calc(0.33em + 0.33vh + 0.33vw);
 }
 
 .project-details p {
     color: var(--container-text-color, #2C3E50);
     background-color: white;
-    font-size: calc(0.25em + 0.25vh + 0.25vw);
+    font-size: calc(0.26em + 0.26vh + 0.26vw);
     padding: 10px;
     text-align: left;
     height: 220px;  
