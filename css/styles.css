@@ -105,8 +105,9 @@ main section {
         margin: 0 auto;
         transform: translateX(-45px);
         padding: 60px;
-        font-size: 36px;
+        font-size: calc(0.8em + 0.8vw + 0.8vh);
         color: var(--header-title-color);
+        text-wrap: nowrap;
     }
 
     footer {
@@ -476,7 +477,7 @@ main section {
     padding: 10px;
     text-align: left;
     min-height: 200px;
-    height: 00px;
+    height: 300px;
 }
 
 .project-details a {
