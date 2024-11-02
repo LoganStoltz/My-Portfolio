@@ -1,0 +1,17 @@
+/* /src/components/Resume/Resume.css */
+#resume {
+    background-color: var(--bg1);
+    scroll-padding-top: 1000px;
+}
+
+.section-header-resume {
+    position: absolute;
+    top: calc(100vh + 30px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--header-title-color);
+    color: var(--header-text-color);
+    text-align: center;
+    width: 101%;
+    height: 60px;
+}

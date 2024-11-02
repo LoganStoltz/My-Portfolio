@@ -1,53 +1,87 @@
-// Author: Logan Stoltz 
+// App.js
+import React, { useState, useEffect } from 'react';
+import './App.css'; // Import your CSS here
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
-});
+// SmoothScroll Component
+const SmoothScroll = () => {
+  useEffect(() => {
+    const handleSmoothScroll = (e) => {
+      e.preventDefault();
+      const targetId = e.currentTarget.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      } else {
+        console.warn(`Target element ${targetId} not found.`);
+      }
+    };
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+    const anchors = document.querySelectorAll('a[href^="#"]');
+    anchors.forEach(anchor => anchor.addEventListener('click', handleSmoothScroll));
 
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth'
-            });
-        } else {
-            console.warn(`Target element ${targetId} not found.`);
-        }
-    });
-});
+    return () => {
+      anchors.forEach(anchor => anchor.removeEventListener('click', handleSmoothScroll));
+    };
+  }, []);
 
+  return null; // This component doesn't render anything, just handles scrolling.
+};
 
-let currentPage = 0;
-const classPages = document.querySelectorAll('.class-page');
-const totalPages = classPages.length;
+// Pagination Component
+const Pagination = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const classPages = ['Page 1', 'Page 2', 'Page 3']; // Example pages
+  const totalPages = classPages.length;
 
-function updatePage() {
-    classPages.forEach((page) => {
-        page.style.transform = `translateX(-${currentPage * 100}%)`;
-    });
+  const updatePage = () => {
+    // You could add any additional side effects for page updates here
+  };
 
-    document.querySelector('.left-button').disabled = currentPage === 0;
-    document.querySelector('.right-button').disabled = currentPage === totalPages - 1;
-}
-
-function prevPage() {
+  const prevPage = () => {
     if (currentPage > 0) {
-        currentPage--;
-        updatePage();
+      setCurrentPage((prev) => prev - 1);
+      updatePage();
     }
-}
+  };
 
-function nextPage() {
+  const nextPage = () => {
     if (currentPage < totalPages - 1) {
-        currentPage++;
-        updatePage();
+      setCurrentPage((prev) => prev + 1);
+      updatePage();
     }
-}
+  };
 
-// Initialize
-updatePage();
+  return (
+    <div className="pagination-container">
+      <div className="pages-wrapper" style={{ transform: `translateX(-${currentPage * 100}%)` }}>
+        {classPages.map((pageContent, index) => (
+          <div key={index} className="class-page">
+            {pageContent}
+          </div>
+        ))}
+      </div>
+
+      <button className="left-button" onClick={prevPage} disabled={currentPage === 0}>
+        Previous
+      </button>
+      <button className="right-button" onClick={nextPage} disabled={currentPage === totalPages - 1}>
+        Next
+      </button>
+    </div>
+  );
+};
+
+// Main App Component
+const App = () => {
+  return (
+    <div className="App">
+      <SmoothScroll />
+      <Pagination />
+    </div>
+  );
+};
+
+export default App;

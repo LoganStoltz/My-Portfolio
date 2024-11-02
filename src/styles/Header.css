@@ -1,0 +1,87 @@
+/* /src/components/Header/Header.css */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0 auto;
+    transform: translateX(-45px);
+    padding: 60px;
+    font-size: calc(0.8em + 0.8vw + 0.8vh);
+    color: var(--header-title-color);
+    text-wrap: nowrap;
+}
+
+/* Navigation styles */
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    margin-left: -10px;
+}
+
+.nav-right {
+    margin-left: 10%;
+}
+
+.navlinks a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 17px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navlinks a:hover {
+    background-color: var(--highlight-color);
+    color: var(--text-color-light);
+}
+
+.navlinks,
+.externallinks {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* External link styles */
+.externallinks a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--link-bg-color);
+    color: var(--header-bg-color);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.externallinks a:hover {
+    background-color: var(--link-bg-color-hover);
+}
+
+.externallinks li {
+    margin-left: 10px;
+}
+
+.externallinks i {
+    font-size: 20px;
+}

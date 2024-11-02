@@ -1,0 +1,10 @@
+/* /src/components/Footer/Footer.css */
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    height: var(--footer-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
