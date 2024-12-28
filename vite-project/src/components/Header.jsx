@@ -15,10 +15,10 @@ const Header = () => {
             <nav className="nav-middle">
                 <h1>My Portfolio</h1>
             </nav>
-            <div className="nav-middle">
+            <div className="nav-right">
                 <ul className="externallinks">
-                    <li><a href="#" aria-label="External Link"><i className="icon-link"></i></a></li>
-                    <li><a href="#" aria-label="External Link"><i className="icon-link"></i></a></li>
+                    <li><a href="https://github.com/LoganStoltz" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+                    <li><a href="https://linkedin.com/in/logan-stoltz" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
                 </ul>
             </div>
         </header>

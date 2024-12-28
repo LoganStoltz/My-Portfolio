@@ -1,48 +1,46 @@
 /* /src/components/Home/Home.css */
 #home { 
-    background: url('My-Portfolio\vite-project\src\assets\Logan_Stoltz.pdf') no-repeat center center;
-    background-size: cover; 
-    margin-top: var(--header-height); 
+    background: url('../assets/main.png') no-repeat center center;
+    background-size: cover;
+    margin-top: -50px;
 }
 
-.text-container-info { 
-    position: absolute;
-    top: 80vh; 
-    left: 49.5vw; 
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.2); 
+.text-container-info {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.2);
     color: white;
-    padding-left: 20px;
-    padding-top: 10px;
+    padding: 15px;
+    justify-content: center;
     text-align: center;
-    width: 97vw; 
-    height: 38vh; 
+    transform: translate(0.8vw, 59vh);
+    width: 97.6vw; 
+    height: 40vh; 
     overflow: hidden;
     line-height: 1.4;
 }
 
 .text-container-info h3 {
     margin-bottom: 5px;
-    font-size: calc(0.6em + 0.6vw + 0.6vh);
+    font-size: 30px;
 }
 
 .text-container-info p {
     margin-top: 10px;
     text-align: left;
-    font-size: calc(0.35em + 0.4vw + 0.4vh);
+    font-size: 20px;
 }
 
 .text-container-contact {
-    position: absolute;
-    top: 70px;
-    left: 80vw;
+    position: static;
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
     padding: 20px;
     text-align: center; 
     width: 350px; 
-    height: fit-content;
-    font-size: calc(0.3em + 0.3vw + 0.3vh);
+    height: 120px;
+    font-size: 16px;
+    transform: translate(80.2vw, -33vh);
+    line-height: 1.4;
 }
 
 .text-container-contact h3 {

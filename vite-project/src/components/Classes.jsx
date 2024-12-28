@@ -28,6 +28,7 @@ const Classes = () => {
 
     return (
         <section id="classes">
+            <h2 className="section-header-classes">Classes</h2>
             <div className="classes-container">
                 <button className="scroll-button left-button" onClick={prevPage} disabled={currentPage === 0}>
                     &lt;

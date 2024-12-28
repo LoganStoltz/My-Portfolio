@@ -13,9 +13,9 @@ function App() {
             <Header />
             <main>
                 <Home />
-                <Classes />
+                {/*<Classes />
                 <Projects />
-                <Resume />
+                <Resume />*/}
             </main>
             <Footer />
         </div>

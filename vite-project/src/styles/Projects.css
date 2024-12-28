@@ -5,10 +5,8 @@
 }
 
 .section-header-projects {
-    position: absolute;
+    position: static;
     top: calc(100vh + 30px);
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: var(--header-title-color);
     color: var(--header-text-color);
     text-align: center;

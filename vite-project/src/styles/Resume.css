@@ -2,16 +2,14 @@
 #resume {
     background-color: var(--bg1);
     scroll-padding-top: 1000px;
+    display: flex;
 }
 
 .section-header-resume {
-    position: absolute;
-    top: calc(100vh + 30px);
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: top;
     background-color: var(--header-title-color);
     color: var(--header-text-color);
     text-align: center;
-    width: 101%;
+    width: 100%;
     height: 60px;
 }
