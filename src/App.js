@@ -1,15 +1,15 @@
 import React from 'react';
 import './styles/App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Classes from './components/Classes';
-import Projects from './components/Projects';
-import Resume from './components/Resume';
+import Header from '../vite-project/src/components/Header';
+import Footer from '../vite-project/src/components/Footer';
+import Home from '../vite-project/src/components/Home';
+import Classes from '../vite-project/src/components/Classes';
+import Projects from '../vite-project/src/components/Projects';
+import Resume from '../vite-project/src/components/Resume';
 
-const App = () => {
+function App() {
     return (
-        <div className="App">
+        <div class="App">
             <Header />
             <main>
                 <Home />

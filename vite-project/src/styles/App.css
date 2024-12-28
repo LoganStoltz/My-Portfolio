@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-bg-color: #34495E;
+  --header-title-color: #E74C3C;
+  --header-text-color: #ECF0F1;
+  --highlight-color: #E74C3C;
+  --link-bg-color: #ECF0F1;
+  --link-bg-color-hover: #e74d3c;
+  --bg1: #ECF0F1;
+  --bg2: #8095a3;
+  --footer-bg-color: #34495E;
+  --footer-text-color: #ECF0F1;
+  --scrollbar-bg: #34495E;
+  --scrollbar-thumb: #E74C3C;
+  --accent-red-color: #e76d3c;
+
+  --header-height: 50px;
+  --footer-height: 30px;
+  --container-text-color: #2C3E50;
+  --text-color-light: #ffffff;
+  --container-bg-color: #ffffff;
+  --container-title-color: #C55C00;
+  --container-text-bg: #fff;
+}
