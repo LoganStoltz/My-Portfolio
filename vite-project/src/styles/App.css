@@ -31,7 +31,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: Arial, sans-serif;
 }
 
@@ -49,9 +48,18 @@ main > section {
   text-align: center;
 }
 
-header, footer {
+header {
   position: sticky;
   top: 0;
+}
+footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  height: var(--footer-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /* ===== START SCROLLBAR CSS ===== */

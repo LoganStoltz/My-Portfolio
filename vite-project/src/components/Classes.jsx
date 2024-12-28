@@ -30,15 +30,15 @@ const Classes = () => {
         <section id="classes">
             <h2 className="section-header-classes">Classes</h2>
             <div className="classes-container">
-                <button className="scroll-button left-button" onClick={prevPage} disabled={currentPage === 0}>
+                {/*<button className="scroll-button left-button" onClick={prevPage} disabled={currentPage === 0}>
                     &lt;
-                </button>
+                </button>*/}
                 <div className="class-page" style={{ transition: 'transform 0.5s ease-in-out' }}>
                     {/* Render your class boxes here */}
                 </div>
-                <button className="scroll-button right-button" onClick={nextPage} disabled={currentPage === totalPages - 1}>
+                {/*<button className="scroll-button right-button" onClick={nextPage} disabled={currentPage === totalPages - 1}>
                     &gt;
-                </button>
+                </button>*/}
             </div>
         </section>
     );
