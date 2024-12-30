@@ -13,7 +13,7 @@ const Header = () => {
                 </ul>
             </nav>
             <nav className="nav-middle">
-                <h1>My Portfolio</h1>
+                <h1>Logan Stoltz</h1>
             </nav>
             <div className="nav-right">
                 <ul className="externallinks">

@@ -1,8 +1,6 @@
 /* /src/components/Resume/Resume.css */
 #resume {
     background-color: var(--bg1);
-    scroll-padding-top: 1000px;
-    display: flex;
 }
 
 .section-header-resume {
