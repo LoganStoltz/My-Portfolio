@@ -19,7 +19,7 @@
     gap: 1vh 1vw;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3);
-    margin-top: -50px;
+    margin-top: -175px;
     height: calc(100vh - 150px);
     transition: transform 0.5s ease-in-out;
     padding-left: 60px;
@@ -83,25 +83,23 @@
 
 /* Scroll Buttons */
 .scroll-button {
-    position: absolute;
-    top: 145%;
-    transform: translateY(-50%);
+    position: relative;
+    top: 40%;
     background-color: var(--header-title-color);
     border: none;
     color: var(--header-text-color);
     font-size: 30px;
     cursor: pointer;
     padding: 10px;
-    z-index: 1;
 }
 
 /* Positioning buttons */
 .left-button {
-    left: 10px; 
+    left: -47vw; 
 }
 
 .right-button {
-    right: 10px; 
+    right: -47vw; 
 }
 
 .left-button:hover, .right-button:hover {

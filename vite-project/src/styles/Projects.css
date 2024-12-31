@@ -1,7 +1,6 @@
 /* /src/components/Projects/Projects.css */
 #projects {
     background-color: var(--bg2);
-    scroll-padding-top: 1000px;
 }
 
 .section-header-projects {
