@@ -2,7 +2,6 @@
 #home { 
     background: url('../assets/main.png') no-repeat center center;
     background-size: cover;
-    margin-top: -50px;
 }
 
 .text-container-info {
@@ -13,8 +12,8 @@
     justify-content: center;
     text-align: center;
     transform: translate(0.8vw, 59vh);
-    width: 97.6vw; 
-    height: 40vh; 
+    width: 98.3%; 
+    height: 35.5%; 
     overflow: hidden;
     line-height: 1.4;
 }

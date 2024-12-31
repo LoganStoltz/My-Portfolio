@@ -30,7 +30,10 @@ const Classes = () => {
         <section id="classes">
             <h2 className="section-header">Classes</h2>
             <button className="scroll-button left-button" onClick={prevPage} disabled={currentPage === 0}>
-                    &lt;
+                &#10094;
+            </button>
+            <button className="scroll-button right-button" onClick={nextPage} disabled={currentPage === totalPages - 1}>
+                &#10095;
             </button>
             <div className="classes-container">
                 {/* Page 1 */}
@@ -302,9 +305,6 @@ const Classes = () => {
                 </div> 
                 {/* End Page 3 */}
             </div> {/* End Classes Container */}
-            <button className="scroll-button right-button" onClick={nextPage} disabled={currentPage === totalPages - 1}>
-                    &gt;
-            </button>
         </section>
     );
 }
