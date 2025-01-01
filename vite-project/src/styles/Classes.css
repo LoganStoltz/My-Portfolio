@@ -3,11 +3,22 @@
     scroll-padding-top: 1000px;
 }
 
+.section-header-classes {
+    position: absolute;
+    top: 100vh;
+    background-color: var(--header-title-color);
+    color: var(--header-text-color);
+    text-align: center;
+    width: 100%;
+    height: 60px;
+}
+
 /* classes Container */
 .classes-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 60px;
     height: calc(100vh - 50px);
     width: 100vw;
 }
@@ -19,13 +30,12 @@
     gap: 1vh 1vw;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3);
-    margin-top: -175px;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 135px);
     transition: transform 0.5s ease-in-out;
+    padding-top: 10px;
     padding-left: 60px;
-    padding-right: 80px;
+    padding-right: 60px;
     overflow: hidden;
-
 }
 
 /* Individual Class Box */
@@ -83,23 +93,25 @@
 
 /* Scroll Buttons */
 .scroll-button {
-    position: relative;
-    top: 40%;
+    position: absolute;
+    top: 145%;
+    transform: translateY(-50%);
     background-color: var(--header-title-color);
     border: none;
     color: var(--header-text-color);
     font-size: 30px;
     cursor: pointer;
     padding: 10px;
+    z-index: 1;
 }
 
 /* Positioning buttons */
 .left-button {
-    left: -47vw; 
+    left: 10px; 
 }
 
 .right-button {
-    right: -47vw; 
+    right: 10px; 
 }
 
 .left-button:hover, .right-button:hover {
