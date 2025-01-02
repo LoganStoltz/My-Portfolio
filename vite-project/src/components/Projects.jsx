@@ -21,14 +21,19 @@ const Projects = () => {
                             I worked with a team to develop an online data structure visualizer aimed at helping students understand key concepts like Stacks, Doubly Linked Lists, Binary Search Trees, and Max-Heaps. My contribution focused on building the Stack page, where I created an interactive control panel allowing users to push, pop, peek, and clear elements in a stack, with real-time visual updates and an adjustable animation speed. I also implemented educational sections that showcased stack implementations in Python, C, and Java, along with a detailed breakdown of time complexities and common use cases. This project was shaped by feedback from our professors at Eastern Washington University, who guided us toward addressing the areas students struggle with the most.
                         </p>
                     </div>
-                    <a href="https://github.com/Evebarr20/data-structure-visualizer" target="_blank" rel="noopener noreferrer">
-                        <div className="project-github-button">
-                            View on GitHub
-                        </div>
-                    </a>
-                    <a href="https://datastructurevisualizer.netlify.app/stack" target="_blank" rel="noopener noreferrer">
-                        <img src="\src\assets\project1.jpg" alt="Screenshot of Stack Data Structure Visualizer" />
-                    </a>
+
+                    <div className='project-buttons-section'>
+                        <a href="https://github.com/Evebarr20/data-structure-visualizer" target="_blank" rel="noopener noreferrer">
+                            <div className="project-button">
+                                View on GitHub
+                            </div>
+                        </a>
+                        <a href="https://datastructurevisualizer.netlify.app/stack" target="_blank" rel="noopener noreferrer">
+                            <div className="project-button">
+                                View Project
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
                 {/* Project 2 */}
@@ -40,14 +45,13 @@ const Projects = () => {
                             I worked with a team to develop a digital version of Orbellion, a student-made card game created by Nathan Marsee, using Unity. My main contributions were designing the gameboard and implementing key early features like the health and card systems, which enabled the game to track player health, manage card draws, and move cards between zones to perform various operations. Although the project wasn’t fully completed due to time constraints, we successfully established the foundation, allowing two players to draw cards and use energy to damage each other’s Hellions. This project provided me with valuable experience in game development and system design, even in its unfinished state.
                         </p>
                     </div>
-                    <a href="https://github.com/NathanMarsee/Orbellion-Digital-Game" target="_blank" rel="noopener noreferrer">
-                        <div className="project-github-button">
-                            View on GitHub
-                        </div>
-                    </a>
-                    <a href="https://www.youtube.com/watch?v=UP6pODdvyNU&t" target="_blank" rel="noopener noreferrer">
-                        <img src="\src\assets\project2.jpg" alt="Screenshot of Orbellion game" />
-                    </a>
+                    <div className='project-buttons-section'>
+                        <a href="https://github.com/NathanMarsee/Orbellion-Digital-Game" target="_blank" rel="noopener noreferrer">
+                            <div className="project-button">
+                                View on GitHub
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
                 {/* Project 3 */}
@@ -59,14 +63,13 @@ const Projects = () => {
                             My portfolio showcases my web development and design skills through a selection of projects, including e-commerce platforms, game development, and data visualizations. Built with HTML, CSS, and JavaScript, the site is responsive and user-friendly, featuring smooth navigation and modern design elements. It highlights my technical abilities, academic coursework, and expertise in various technologies like React, C++, and JavaScript. This portfolio reflects both my professional skills and design sensibilities.
                         </p>
                     </div>
-                    <a href="https://github.com/LoganStoltz/My-Portfolio" target="_blank" rel="noopener noreferrer">
-                        <div className="project-github-button">
-                            View on GitHub
-                        </div>
-                    </a>
-                    <a href="/html/index.html">
-                        <img src="\src\assets\project3.JPG" alt="Screenshot of portfolio website" />
-                    </a>
+                    <div className='project-buttons-section'>
+                        <a href="https://github.com/LoganStoltz/My-Portfolio" target="_blank" rel="noopener noreferrer">
+                            <div className="project-button">
+                                View on GitHub
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
