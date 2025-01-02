@@ -1,3 +1,5 @@
+/* Author: Logan Stoltz */
+
 import React from 'react';
 import '../styles/Resume.css';
 
@@ -23,9 +25,15 @@ const Resume = () => {
                 </div>
             </div>
 
-            <div class="resume-file">
-                {/* Embed PDF Viewer 
-                <iframe src="../assets/Logan_Stoltz.pdf" width="100%" height="600px" style="border: none;" />*/}
+            <div className="resume-file">
+                {/* Embed PDF Viewer */}
+                <iframe 
+                    src={'/src/assets/Logan_Stoltz_Resume.pdf'} 
+                    width="100%" 
+                    height="600px" 
+                    style={{ border: "none" }} 
+                    title="Resume PDF Viewer"
+                />
             </div>
         </section>
     );

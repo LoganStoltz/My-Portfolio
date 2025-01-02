@@ -1,3 +1,4 @@
+/* Author: Logan Stoltz */
 
 import '../styles/Footer.css';
 

@@ -1,3 +1,5 @@
+/* Author: Logan Stoltz */
+
 import React from 'react';
 import '../styles/Projects.css';
 
@@ -25,7 +27,7 @@ const Projects = () => {
                         </div>
                     </a>
                     <a href="https://datastructurevisualizer.netlify.app/stack" target="_blank" rel="noopener noreferrer">
-                        <img src="/images/project1.jpg" alt="Screenshot of Stack Data Structure Visualizer" />
+                        <img src="\src\assets\project1.jpg" alt="Screenshot of Stack Data Structure Visualizer" />
                     </a>
                 </div>
 
@@ -44,7 +46,7 @@ const Projects = () => {
                         </div>
                     </a>
                     <a href="https://www.youtube.com/watch?v=UP6pODdvyNU&t" target="_blank" rel="noopener noreferrer">
-                        <img src="/images/project2.jpg" alt="Screenshot of Orbellion game" />
+                        <img src="\src\assets\project2.jpg" alt="Screenshot of Orbellion game" />
                     </a>
                 </div>
 
@@ -63,7 +65,7 @@ const Projects = () => {
                         </div>
                     </a>
                     <a href="/html/index.html">
-                        <img src="/assets/project3.jpg" alt="Screenshot of portfolio website" />
+                        <img src="\src\assets\project3.JPG" alt="Screenshot of portfolio website" />
                     </a>
                 </div>
             </div>

@@ -1,3 +1,5 @@
+/* Author: Logan Stoltz */
+
 #classes { 
     background-color: var(--bg1);
     scroll-padding-top: 1000px;
@@ -20,7 +22,7 @@
     align-items: center;
     padding-top: 60px;
     height: calc(100vh - 50px);
-    width: 100vw;
+    width: 300%;
 }
 
 /* Container for Class Pages */

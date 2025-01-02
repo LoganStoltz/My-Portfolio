@@ -1,3 +1,5 @@
+/* Author: Logan Stoltz */
+
 import React from 'react';
 import '../styles/Header.css';
 

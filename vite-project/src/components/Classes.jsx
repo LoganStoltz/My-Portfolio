@@ -1,38 +1,43 @@
+/* Author: Logan Stoltz */
+
 import React, { useState } from 'react';
 import '../styles/Classes.css';
 
 const Classes = () => {
-    const [currentPage, setCurrentPage] = useState(0);
-    const classPages = React.Children.toArray(document.querySelectorAll('.class-page'));
+    let currentPage = 0;
+    const classPages = document.querySelectorAll('.class-page');
     const totalPages = classPages.length;
-
-    const updatePage = () => {
-        classPages.forEach((page, index) => {
-            page.style.transform = `translateX(-${currentPage * 100}%)`;
-        });
-    };
-
-    const prevPage = () => {
-        if (currentPage > 0) {
-            setCurrentPage(currentPage - 1);
-            updatePage();
-        }
-    };
-
-    const nextPage = () => {
-        if (currentPage < totalPages - 1) {
-            setCurrentPage(currentPage + 1);
-            updatePage();
-        }
-    };
+    
+    function updatePage() {
+      classPages.forEach((page) => {
+          page.style.transform = `translateX(-${currentPage * 100}%)`;
+      });
+    
+      document.querySelector('.left-button').disabled = currentPage === 0;
+      document.querySelector('.right-button').disabled = currentPage === totalPages - 1;
+    }
+    
+    function prevPage() {
+      if (currentPage > 0) {
+          currentPage--;
+          updatePage();
+      }
+    }
+    
+    function nextPage() {
+      if (currentPage < totalPages - 1) {
+          currentPage++;
+          updatePage();
+      }
+    }
 
     return (
         <section id="classes">
             <h2 className="section-header-classes">Classes</h2>
-            <button className="scroll-button left-button" onClick={prevPage} disabled={currentPage === 0}>
+            <button className="scroll-button left-button" onClick={prevPage}>
                 &#10094;
             </button>
-            <button className="scroll-button right-button" onClick={nextPage} disabled={currentPage === totalPages - 1}>
+            <button className="scroll-button right-button" onClick={nextPage}>
                 &#10095;
             </button>
             <div className="classes-container">
@@ -299,6 +304,17 @@ const Classes = () => {
                                 <h3>DATA MINING</h3>
                                 <h4>C+</h4>
                                 <p>This course will provide an introduction to the main topics in data mining and knowledge discovery, including: data preparation for knowledge discovery, frequent pattern and association mining, classification and cluster analysis.</p>
+                            </div>
+                        </a>
+                    </div>
+                    {/* Class 24 */}
+                    <div class="class-box">
+                        <a href="https://catalog.ewu.edu/search/?P=CSCD%20420" target="_blank">
+                            <div class="class-details">
+                                <h4>CSCD420</h4>
+                                <h3>COMPILERS AND AUTOMATA</h3>
+                                <h4>A-</h4>
+                                <p>This course explores Automata Theory, Regular Expressions, the Backus-Naur metalanguage for specifying programming language syntax, and Interpreter and Compiler Design. Programming projects are required.</p>
                             </div>
                         </a>
                     </div>
