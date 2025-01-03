@@ -23,9 +23,10 @@
     gap: 30px;
     padding: 20px 30px;
     max-width: 100%;
-    height: var(--project-container-height, auto);
+    height: calc(100vh - var(--header-height));
     padding-top: 45px;
     box-sizing: border-box;
+    background-color: aqua;
 }
 
 /* Individual Project Box */
@@ -39,8 +40,6 @@
     height: calc(84vh - 40px);
     transition: transform 0.3s ease;
     margin-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,50 +52,55 @@
 /* Project Details */
 .project-details {
     flex: 1;
+    background-color: blueviolet;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .project-details h3 {
     color: var(--header-title-color);
-    font-size: calc(0.6em + 0.6vh + 0.6vw);
+    font-size: 34px;
     padding-top: 5px;
     text-decoration: underline;
     text-underline-offset: 10px;
+    background-color: green;
 }
 
 .project-details h4 {
     color: var(--container-text-color);
-    font-size: calc(0.33em + 0.33vh + 0.33vw);
+    font-size: 18px;
+    background-color: teal;
 }
 
 .project-details p {
     color: var(--container-text-color, #2C3E50);
-    background-color: white;
-    padding: 10px;
-    text-align: left;
-    height: 220px;  
-    font-size: calc(0.25em + 0.5vw);
+    background-color: red;
+    text-align: left; 
+    font-size: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 100%;
+    height: 60vh;
 }
 
 .project-buttons-section {
     display: flex;
     flex-direction: row;
-    flex: 100%;
+    background-color: brown;
+    width: 100%;
+    gap: 0; /* Removes spacing between buttons */
+    height: 100%; /* Ensures the section takes up all its container's height */
 }
 
 .project-button {
-    display: flex;
+    flex: 1 1 0; /* Equal width for all items */
+    align-items: center; /* Centers text inside buttons vertically */
+    justify-content: center; /* Centers text inside buttons horizontally */
     background-color: rgb(231, 231, 231);
-    outline-width: 2px;
-    outline-style: solid;
-    outline-color: var(--header-title-color);
-    margin: 2px;
+    border: 2px solid var(--header-title-color); /* Alternative to outline */
     font-size: calc(0.35em + 0.35vh + 0.35vw);
+    height: 100%; /* Ensures buttons take up all the height of the section */
     text-align: center;
-    width: 100%;
-    align-self: flex-end;
 }
 
 .project-button:hover {
