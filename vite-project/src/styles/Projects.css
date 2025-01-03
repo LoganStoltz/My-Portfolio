@@ -26,7 +26,6 @@
     height: calc(100vh - var(--header-height));
     padding-top: 45px;
     box-sizing: border-box;
-    background-color: aqua;
 }
 
 /* Individual Project Box */
@@ -52,7 +51,6 @@
 /* Project Details */
 .project-details {
     flex: 1;
-    background-color: blueviolet;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -64,18 +62,15 @@
     padding-top: 5px;
     text-decoration: underline;
     text-underline-offset: 10px;
-    background-color: green;
 }
 
 .project-details h4 {
     color: var(--container-text-color);
     font-size: 18px;
-    background-color: teal;
 }
 
 .project-details p {
     color: var(--container-text-color, #2C3E50);
-    background-color: red;
     text-align: left; 
     font-size: 18px;
     overflow: hidden;
@@ -86,21 +81,28 @@
 .project-buttons-section {
     display: flex;
     flex-direction: row;
-    background-color: brown;
     width: 100%;
-    gap: 0; /* Removes spacing between buttons */
     height: 100%; /* Ensures the section takes up all its container's height */
 }
 
 .project-button {
-    flex: 1 1 0; /* Equal width for all items */
-    align-items: center; /* Centers text inside buttons vertically */
-    justify-content: center; /* Centers text inside buttons horizontally */
-    background-color: rgb(231, 231, 231);
-    border: 2px solid var(--header-title-color); /* Alternative to outline */
-    font-size: calc(0.35em + 0.35vh + 0.35vw);
-    height: 100%; /* Ensures buttons take up all the height of the section */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(231, 231, 231); 
+    border: 2px solid var(--header-title-color);
+    font-size: calc(0.35em + 0.35vh + 0.35vw); 
+    height: 100%; 
     text-align: center;
+}
+
+.project-buttons-section > a {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .project-button:hover {
