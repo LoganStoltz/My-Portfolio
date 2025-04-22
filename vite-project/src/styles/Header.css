@@ -2,11 +2,12 @@
 
 header {
     position: sticky;
+    top: 0;
     width: 100%;
     background-color: var(--header-bg-color);
     color: var(--header-text-color);
     height: var(--header-height);
-    margin-top: calc(-1 *var(--header-height));
+    z-index: 999;
 }
 
 /* Navigation styles */
@@ -16,6 +17,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: left;
+    position: sticky;
 }
 
 .navlinks a {

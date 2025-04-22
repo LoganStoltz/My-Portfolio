@@ -36,8 +36,8 @@ function App() {
     return (
         <div className="App">
             <Home />
+            <Header />
             <main>
-                <Header />
                 <Classes />
                 {/*<Projects />
                 <Resume /> WORK HERE*/}
