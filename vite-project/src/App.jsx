@@ -35,12 +35,12 @@ function App() {
       
     return (
         <div className="App">
-            <Header />
+            <Home />
             <main>
-                <Home />
+                <Header />
                 <Classes />
-                <Projects />
-                <Resume />
+                {/*<Projects />
+                <Resume /> WORK HERE*/}
             </main>
             <Footer />
         </div>

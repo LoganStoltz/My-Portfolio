@@ -21,7 +21,7 @@
   --scrollbar-thumb: #E74C3C;
   --accent-red-color: #e76d3c;
 
-  --header-height: 50px;
+  --header-height: 70px;
   --footer-height: 30px;
   --container-text-color: #2C3E50;
   --text-color-light: #ffffff;
@@ -30,32 +30,21 @@
   --container-text-bg: #fff;
 }
 
-main {
-  flex-grow: 1;
-}
-
 .App {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: var(--bg1);
   color: var(--body-text-color);
   margin: 0;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 50vh;
 }
 
-main > section {
-  min-height: 50vh;
-  height: calc(100vh - var(--header-height));
-  display: flex;
+main {
   justify-content: center;
   align-items: center;
   font-size: 24px;
   text-align: center;
   scroll-margin-top: var(--header-height); /* Offset anchor scroll for the header */
 }
+
 
 footer {
   background-color: var(--footer-bg-color);

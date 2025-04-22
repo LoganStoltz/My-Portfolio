@@ -1,34 +1,38 @@
 /* Author: Logan Stoltz */
 
 #home { 
-    background: url('../assets/main.png') no-repeat center center;
+    background: teal;
     background-size: cover;
-    margin-top: 50px;
+    height: calc(100vh + var(--header-height));
 }
 
 /* ===== START HOME SECTION CSS ===== */
 .text-container-info { 
-    position: absolute;
-    top: 80vh; 
-    left: 49.5vw; 
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.2); 
+    position: relative;
+    top: 320px;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding-left: 20px;
-    padding-top: 10px;
     text-align: center;
-    width: 97vw; 
-    height: 38vh; 
-    overflow: hidden;
-    line-height: 1.4;
-}
-
-.text-container-info h3 {
-    margin-bottom: 5px;
-    font-size: calc(0.6em + 0.6vw + 0.6vh);
 }
 
 .text-container-info p {
+    text-align: center;
+    font-size: 60px;
+}
+
+.view-more {
+    position: relative;
+    top: 340px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+}
+
+.view-more button {
+
+}
+
+/*.text-container-info p {
     margin-top: 10px;
     text-align: left;
     font-size: calc(0.35em + 0.4vw + 0.4vh);
@@ -61,5 +65,5 @@
     text-decoration: none;
     border-bottom: 1px solid #ffffff;
     transition: color 0.3s, border-bottom-color 0.3s;
-}
+}*/
 /* ===== END HOME SECTION CSS ===== */
