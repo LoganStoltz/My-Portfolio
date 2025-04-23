@@ -33,7 +33,7 @@ const Classes = () => {
 
     return (
         <section id="classes">
-            <h2 className="section-header-classes">Classes</h2>
+            <h2 className="section-header">Classes</h2>
             <button className="scroll-button left-button" onClick={prevPage}>
                 &#10094;
             </button>

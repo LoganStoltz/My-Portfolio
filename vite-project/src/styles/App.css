@@ -45,6 +45,15 @@ main {
   scroll-margin-top: var(--header-height); /* Offset anchor scroll for the header */
 }
 
+.section-header {
+  position: relative;
+  top: 8%;
+  color: var(--header-text-color);
+  text-align: center;
+  font-size: 64px;
+  width: 100%;
+  background-color: blue;
+}
 
 footer {
   background-color: var(--footer-bg-color);
