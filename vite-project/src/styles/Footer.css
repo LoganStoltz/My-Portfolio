@@ -5,8 +5,41 @@ footer {
     color: var(--footer-text-color);
     height: var(--footer-height);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     transform: translate(0, calc(var(--header-height) * -1));
+}
+
+.externallinks {
+    list-style: none;
+    display: flex;
+    height: 0px;
+}
+
+/* External link styles */
+.externallinks a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.externallinks a:hover {
+    transform: scale(1.25);
+}
+
+.externallinks li {
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+.externallinks i {
+    font-size: 32px;
 }

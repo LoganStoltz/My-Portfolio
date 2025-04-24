@@ -1,7 +1,7 @@
 /* Author: Logan Stoltz */
 
 #classes { 
-    background-color: teal;/*var(--bg1);*/
+    background-color: var(--bg1);
     scroll-padding-top: 1000px;
     height: 100vh;
     
@@ -26,8 +26,8 @@
     height: calc(100vh - 150px);
     transition: transform 0.5s ease-in-out;
     padding-top: 10px;
-    padding-left: 55px;
-    padding-right: 70px;
+    padding-left: 60px;
+    padding-right: 62px;
     
 }
 
