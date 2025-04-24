@@ -8,4 +8,5 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
+    transform: translate(0, calc(var(--header-height) * -1));
 }

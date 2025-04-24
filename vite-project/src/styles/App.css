@@ -42,27 +42,17 @@ main {
   align-items: center;
   font-size: 24px;
   text-align: center;
-  scroll-margin-top: var(--header-height); /* Offset anchor scroll for the header */
+  transform: translate(0, calc(var(--header-height) * -1));
 }
 
 .section-header {
   position: relative;
-  top: 8%;
+  top: var(--header-height);
   color: var(--header-text-color);
   text-align: center;
-  font-size: 64px;
-  width: 100%;
-  background-color: blue;
-}
-
-footer {
-  background-color: var(--footer-bg-color);
-  color: var(--footer-text-color);
-  height: var(--footer-height);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  font-size: 48px;
+  width: 100%;  
+  
 }
 
 /* ===== START SCROLLBAR CSS ===== */
