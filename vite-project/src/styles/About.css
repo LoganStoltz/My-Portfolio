@@ -1,0 +1,7 @@
+/* Author: Logan Stoltz */
+
+#about {
+    background-color: var(--bg1);
+    scroll-padding-top: 1000px;
+    height: 100vh; 
+}

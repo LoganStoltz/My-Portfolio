@@ -11,7 +11,7 @@ const Home = () => {
                 <p>I'm a software developer.</p>
             </div>
             <div class="view-more">
-                <a href="#classes"><button>View More</button></a>
+                <a href="#about"><button>View More</button></a>
             </div>
         </section>
     );
