@@ -1,7 +1,50 @@
 /* Author: Logan Stoltz */
 
 #about {
-    background-color: var(--bg1);
-    scroll-padding-top: 1000px;
+    background-color: green;
     height: 100vh; 
+}
+
+/*h2 {}*/
+
+.about-container {
+    background-color: teal;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: calc(100vw - 16px);
+    padding-top: 62px;
+}
+
+.info {
+    background-color: rgb(2, 0, 128);
+    height: calc(100vh - 139px);
+    width: 50vw;
+}
+
+.about-me-text {
+    background-color: rgb(126, 128, 0);
+    height: calc(50vh - 69.5px);
+    width: calc(50vw - 8px);
+}
+
+.icon {
+    background-color: rgb(255, 77, 77);
+    height: calc(50vh - 69.5px);
+    width: calc(50vw - 8px);
+}
+
+
+.lang-tools-section {
+    background-color: rgb(113, 0, 128);
+    height: calc(100vh - 139px);
+    width: calc(50vw);
+    display: grid;
+}
+
+.lang-tool {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    background-color: orange;
 }
