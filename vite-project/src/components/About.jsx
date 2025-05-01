@@ -24,6 +24,14 @@ const About = () => {
                     <div className="lang-tool"></div>
                     <div className="lang-tool"></div>
                     <div className="lang-tool"></div>
+                    <div className="lang-tool"></div>
+                    <div className="lang-tool"></div>
+                    <div className="lang-tool"></div>
+                    <div className="lang-tool"></div>
+                    <div className="lang-tool"></div>
+                    <div className="lang-tool"></div>
+                    <div className="lang-tool"></div>
+                    
                 </div>
             </div> 
 

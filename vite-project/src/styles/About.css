@@ -40,11 +40,11 @@
     height: calc(100vh - 139px);
     width: calc(50vw);
     display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 80px;
 }
 
 .lang-tool {
-    width: 60px;
-    height: 60px;
     margin: 10px;
     background-color: orange;
 }
