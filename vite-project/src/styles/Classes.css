@@ -1,19 +1,19 @@
 /* Author: Logan Stoltz */
 
 #classes { 
-    background-color: var(--bg1);
-    scroll-padding-top: 1000px;
-    height: 100vh;
-    
+    background-color: green;/*var(--bg1);*/
+    height: calc(100vh - var(--header-height)); 
 }
 
 /* classes Container */
 .classes-container {
     display: flex;
     justify-content: space-between;
-    height: calc(100vh - 137px);
+    margin-top: 60px;
+    height: calc(100vh - 197px);
     width: calc(100vw - 15px);
     overflow-x: hidden;
+    background-color: #bb3e30;
 }
 
 /* Container for Class Pages */

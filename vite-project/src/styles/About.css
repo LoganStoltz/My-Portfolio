@@ -7,44 +7,50 @@
 
 /*h2 {}*/
 
-.about-container {
+.about-me-page-container {
     background-color: teal;
     display: flex;
     flex-direction: row;
     height: 100vh;
-    width: calc(100vw - 16px);
-    padding-top: 62px;
+    width: calc(100vw - 15px);
+    padding-top: 120px;
 }
 
-.info {
+.about-me-section {
     background-color: rgb(2, 0, 128);
-    height: calc(100vh - 139px);
+    height: calc(100vh - 197px);
     width: 50vw;
 }
 
-.about-me-text {
+.about-me-text-box {
     background-color: rgb(126, 128, 0);
-    height: calc(50vh - 69.5px);
+    height: calc(50vh - 98.5px);
     width: calc(50vw - 8px);
+    
 }
 
-.icon {
+.about-me-text {}
+
+.about-me-icon {
     background-color: rgb(255, 77, 77);
-    height: calc(50vh - 69.5px);
+    height: calc(50vh - 98.5px);
     width: calc(50vw - 8px);
 }
 
 
-.lang-tools-section {
+
+.languages-and-tools-section {
     background-color: rgb(113, 0, 128);
-    height: calc(100vh - 139px);
-    width: calc(50vw);
+    height: calc(100vh - 197px);
+    width: 50vw;
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 80px;
 }
 
-.lang-tool {
+.languages-and-tools-boxes {
     margin: 10px;
     background-color: orange;
 }
+
+.languages-and-tools-text {}
