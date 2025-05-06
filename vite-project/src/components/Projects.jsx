@@ -7,7 +7,7 @@ const Projects = () => {
     return (
         <section id="projects">
             {/* Content for Projects section */}
-            <h2 className="section-header">Projects</h2>
+            <h2 className="section-header-others">Projects</h2>
             <div className="projects-container">
                 {/* Project 1 */}
                 <div className="project-box">

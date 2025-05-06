@@ -2,11 +2,14 @@
 
 #resume {
     background-color: var(--bg1);
+    scroll-margin-top: var(--header-height);
+    height: calc(100vh - var(--header-height));
 }
 
 .resume-file iframe {
-    padding-top: 100px;
-    height: 90vh;
-    margin: 0px;
+    padding-top: 60px;
+    height: 84vh;
+    width: calc(100vw - 15px);
+    background-color: aqua;
 }
 /* ===== END RESUME SECTION CSS ===== */

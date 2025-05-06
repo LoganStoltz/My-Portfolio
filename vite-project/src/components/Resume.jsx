@@ -7,7 +7,7 @@ const Resume = () => {
     return (
         <section id="resume">
             {/* Resume Section Content */}
-            <h2 class="section-header">Resume</h2>
+            <h2 class="section-header-others">Resume</h2>
 
             <div className="resume-file">
                 {/* Embed PDF Viewer */}

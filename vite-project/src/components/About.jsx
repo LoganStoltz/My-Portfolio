@@ -6,7 +6,7 @@ import '../styles/About.css';
 const About = () => {
     return (
         <section id="about">
-            <h2 className="section-header">About Me</h2>
+            <h2 className="section-header-first">About Me</h2>
             <div class="about-me-page-container">
                 
                 

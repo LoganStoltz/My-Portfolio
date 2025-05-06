@@ -1,20 +1,21 @@
 /* Author: Logan Stoltz */
 
 #projects {
-    background-color: var(--bg1);
-    height: fit-contents;
+    background-color: violet;/*var(--bg1);*/
+    height: fit-content;
+    scroll-margin-top: var(--header-height);
 }
 
 /* Projects Container */
 .projects-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 80px 90px;
+    gap: 80px;
+    padding: 40px 40px;
     max-width: 100%;
     height: fit-content;
-    padding-top: 45px;
     box-sizing: border-box;
+    background-color: #2C3E50;
 }
 
 /* Individual Project Box */
@@ -25,7 +26,7 @@
     outline: var(--bg1) solid 3px;
     transition: transform 0.3s ease;
     margin-top: 30px;
-    height: fit-content;
+    height: 77vh;
     border-radius: 5px;
 }
 

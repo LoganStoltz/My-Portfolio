@@ -23,7 +23,8 @@
 
   --header-height: 72px;
   --footer-height: 130px;
-  --section-header-height: 100px;
+  --section-header-height-first: 100px;
+  --section-header-height-others: 35px;
   --container-text-color: #2C3E50;
   --text-color-light: #ffffff;
   --container-bg-color: #ffffff;
@@ -46,14 +47,22 @@ main {
   transform: translate(0, calc(var(--header-height) * -1));
 }
 
-.section-header {
+.section-header-first {
   position: relative;
-  top: var(--section-header-height);
+  top: var(--section-header-height-first);
   color: var(--header-text-color);
   text-align: center;
   font-size: 48px;
-  width: 100%;  
-  
+  width: 100%;    
+}
+
+.section-header-others {
+  position: relative;
+  top: var(--section-header-height-others);
+  color: var(--header-text-color);
+  text-align: center;
+  font-size: 48px;
+  width: 100%;    
 }
 
 /* ===== START SCROLLBAR CSS ===== */
