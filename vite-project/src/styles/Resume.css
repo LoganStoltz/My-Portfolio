@@ -1,13 +1,13 @@
 /* Author: Logan Stoltz */
 
 #resume {
-    background-color: var(--bg1);
+    background-color: orange;/*var(--bg1);*/
     scroll-margin-top: var(--header-height);
     height: calc(100vh - var(--header-height));
 }
 
 .resume-file iframe {
-    padding-top: 60px;
+    margin-top: 60px;
     height: 84vh;
     width: calc(100vw - 15px);
     background-color: aqua;
