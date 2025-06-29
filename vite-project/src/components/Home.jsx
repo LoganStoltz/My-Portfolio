@@ -9,8 +9,8 @@ const Home = () => {
     <section id="home">
       <Starfield />
       <div className="text-container-info">
-        <p>Hello, I'm Logan Stoltz.</p>
-        <p>I'm a software developer.</p>
+        <p>Welcome! My name is <span>Logan Stoltz</span></p>
+        <p>and I'm a Software Developer.</p>
       </div>
       <div className="view-more">
         <a href="#about"><button>View More</button></a>

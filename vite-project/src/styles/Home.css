@@ -16,6 +16,10 @@ body {
   height: 100vh;
 }
 
+span {
+    color: red;
+}
+
 /* ===== START HOME SECTION CSS ===== */
 .text-container-info { 
     position: relative;
