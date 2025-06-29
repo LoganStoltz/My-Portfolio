@@ -19,6 +19,8 @@ const Home = () => {
 
 export default Home;
 
+
+
 /*
             <div class="text-container-contact">
                 <h3>Contact Information</h3>
