@@ -1,23 +1,26 @@
 /* Author: Logan Stoltz */
 
 import React from 'react';
+import Starfield from '../components/Starfield'; // Adjust path as needed
 import '../styles/Home.css';
 
 const Home = () => {
-    return (
-        <section id="home">
-            <div class="text-container-info">
-                <p>Hello, I'm Logan Stoltz.</p>
-                <p>I'm a software developer.</p>
-            </div>
-            <div class="view-more">
-                <a href="#about"><button>View More</button></a>
-            </div>
-        </section>
-    );
+  return (
+    <section id="home">
+      <Starfield />
+      <div className="text-container-info">
+        <p>Hello, I'm Logan Stoltz.</p>
+        <p>I'm a software developer.</p>
+      </div>
+      <div className="view-more">
+        <a href="#about"><button>View More</button></a>
+      </div>
+    </section>
+  );
 }
 
 export default Home;
+
 
 
 
