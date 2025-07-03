@@ -1,7 +1,7 @@
 /* Author: Logan Stoltz */
 
 #classes { 
-    background-color: green;/*var(--bg1);*/
+    background-color: rgba(0, 128, 0, 0.247);/*var(--bg1);*/
     height: calc(100vh - var(--header-height));
     scroll-margin-top: var(--header-height);
 }
@@ -13,7 +13,7 @@
     height: calc(100vh - 197px);
     width: calc(100vw - 15px);
     overflow-x: hidden;
-    background-color: #bb3e30;
+    background-color: #bb3e3067;
 }
 
 /* Container for Class Pages */
@@ -36,7 +36,7 @@
     transition: transform 0.3s ease-in-out;
     width: 100%;
     padding: 0px;
-    background-color: lightcyan;
+    background-color: rgba(224, 255, 255, 0.349);
     padding: 10px;
     border-radius: 5px;
 }

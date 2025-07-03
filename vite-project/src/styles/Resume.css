@@ -1,7 +1,7 @@
 /* Author: Logan Stoltz */
 
 #resume {
-    background-color: orange;/*var(--bg1);*/
+    background-color: rgba(255, 166, 0, 0.137);/*var(--bg1);*/
     scroll-margin-top: var(--header-height);
     height: calc(100vh - var(--header-height));
 }

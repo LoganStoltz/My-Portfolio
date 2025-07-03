@@ -1,7 +1,7 @@
 /* Author: Logan Stoltz */
 
 #projects {
-    background-color: violet;/*var(--bg1);*/
+    background-color: rgba(238, 130, 238, 0.274);/*var(--bg1);*/
     height: fit-content;
     scroll-margin-top: var(--header-height);
 }
@@ -17,13 +17,13 @@
     max-width: 100%;
     height: fit-content;
     box-sizing: border-box;
-    background-color: #2C3E50;
+    background-color: #2c3e5038;
     margin-top: 60px;
 }
 
 /* Individual Project Box */
 .project-box {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.151);
     overflow: hidden;
     box-sizing: border-box;
     outline: var(--bg1) solid 3px;
@@ -77,7 +77,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(231, 231, 231); 
+    background-color: rgba(231, 231, 231, 0.322); 
     border: 2px solid var(--bg1);
     font-size: calc(0.35em + 0.35vh + 0.35vw); 
     text-align: center;

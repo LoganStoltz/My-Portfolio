@@ -1,14 +1,13 @@
 /* Author: Logan Stoltz */
 
 #about {
-    background-color: green;
     height: 100vh; 
 }
 
 /*h2 {}*/
 
 .about-me-page-container {
-    background-color: teal;
+    background-color: rgba(0, 128, 128, 0.377);
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -17,13 +16,13 @@
 }
 
 .about-me-section {
-    background-color: rgb(2, 0, 128);
+    background-color: rgba(2, 0, 128, 0.274);
     height: calc(100vh - 197px);
     width: 50vw;
 }
 
 .about-me-text-box {
-    background-color: rgb(126, 128, 0);
+    background-color: rgba(126, 128, 0, 0.356);
     height: calc(50vh - 98.5px);
     width: calc(50vw - 8px);
     
@@ -32,7 +31,7 @@
 .about-me-text {}
 
 .about-me-icon {
-    background-color: rgb(255, 77, 77);
+    background-color: rgba(255, 77, 77, 0.288);
     height: calc(50vh - 98.5px);
     width: calc(50vw - 8px);
 }
@@ -40,7 +39,7 @@
 
 
 .languages-and-tools-section {
-    background-color: rgb(113, 0, 128);
+    background-color: rgba(113, 0, 128, 0.192);
     height: calc(100vh - 197px);
     width: 50vw;
     display: grid;
@@ -50,7 +49,7 @@
 
 .languages-and-tools-boxes {
     margin: 10px;
-    background-color: orange;
+    background-color: rgba(255, 166, 0, 0.342);
 }
 
 .languages-and-tools-text {}
